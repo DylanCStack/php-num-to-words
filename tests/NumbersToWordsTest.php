@@ -52,6 +52,15 @@
             $this->assertEquals("ninety nine thousand five hundred sixty seven ",$result);
 
         }
+        function test_under_trillion()
+        {
+            $number = new Numbers;
+            $input = 999567;
+
+            $result= $number->NumbersToWords($input);
+            $this->assertEquals("nine hundred ninety nine thousand five hundred sixty seven ",$result);
+
+        }
     }
 
  ?>

@@ -18,3 +18,6 @@ A website that translates numbers to written words.
 5. The program takes a number less than 100,000 and returns the corresponding word.
     * Input: 99,567
     * Output: ninety nine thousand five hundred sixty seven .
+6. The program takes any number under a trillion and returns the corresponding word.
+    * Input: 999,567
+    * Output: nine hundred ninety nine thousand five hundred sixty seven .
