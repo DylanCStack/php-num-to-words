@@ -15,3 +15,6 @@ A website that translates numbers to written words.
 4. The program takes a number up to 1000 and returns the corresponding word.
     * Input: 998
     * Output: nine hundred ninety eight .
+5. The program takes a number less than 100,000 and returns the corresponding word.
+    * Input: 99,567
+    * Output: ninety nine thousand five hundred sixty seven .

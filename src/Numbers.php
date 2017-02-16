@@ -7,12 +7,20 @@
 
             // $num_str= (string)$input;
             // $result = "";
-            $has_hundred = "";
-            if($input > 99){
-                $has_hundred = "hundred ";
-            }
 
-            $hundreds = (int)($input/100);
+            $tenthousands= (int)($input%100000/10000)*10;
+
+            $has_thousands = "";
+            if($input > 999){
+                $has_thousands = "thousand ";
+            }
+            $thousands= (int)($input%10000/1000);
+
+            $has_hundreds = "";
+            if($input > 99){
+                $has_hundreds = "hundred ";
+            }
+            $hundreds = (int)($input%1000/100);
             $tens = ((int)($input%100/10)) * 10;
             $ones = $input%10;
 
@@ -21,16 +29,16 @@
                 $tens = $input%100;
                 $ones=0;
             }
-            
-            $result = $dictionary[$hundreds].$has_hundred.$dictionary[$tens].$dictionary[$ones];
+            var_dump(" ");
+            var_dump("ones: ".$ones);
+            var_dump("tens: ".$tens);
+            var_dump("hundreds: ".$hundreds);
+            var_dump("thousands: ".$thousands);
+            var_dump("tenthousands: ".$tenthousands);
 
-            return $result;
-            // for($i=0; $i<=strlen($num_str)-1; $i++){
-            //
-            //
-            //
-            //     $result.= $dictionary[$num_str[$i]] . " ";
-            // }
+
+            $result =$dictionary[$tenthousands].$dictionary[$thousands].$has_thousands.$dictionary[$hundreds].$has_hundreds.$dictionary[$tens].$dictionary[$ones];
+
             return $result;
 
         }

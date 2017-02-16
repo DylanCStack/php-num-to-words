@@ -43,6 +43,15 @@
             $this->assertEquals("nine hundred ninety eight ",$result);
 
         }
+        function test_under_100000()
+        {
+            $number = new Numbers;
+            $input = 99567;
+
+            $result= $number->NumbersToWords($input);
+            $this->assertEquals("ninety nine thousand five hundred sixty seven ",$result);
+
+        }
     }
 
  ?>
