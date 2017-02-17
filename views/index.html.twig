@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title></title>
+    </head>
+    <body>
+        <form method="post">
+            <label for"input">Enter Your number Here:</label>
+            <input type="number" name="input">
+            <button type="submit">Translate</button>
+        </form>
+
+        {%if result is not empty%}
+        <h4>{{result}}</h4>
+        {%endif%}
+
+    </body>
+</html>

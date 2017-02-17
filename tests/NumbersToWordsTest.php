@@ -1,12 +1,13 @@
 <?php
     require_once 'src/Numbers.php';
+    require_once 'src/AltNumbers.php';
 
     class NumbersTest extends PHPUnit_Framework_TestCase
 
     {
         function test_single_digit()
         {
-            $number = new Numbers;
+            $number = new AltNumbers;
             $input = 1;
 
             $result= $number->NumbersToWords($input);
@@ -17,7 +18,7 @@
 
         function test_multiple_of_10()
         {
-            $number = new Numbers;
+            $number = new AltNumbers;
             $input = 60;
 
             $result= $number->NumbersToWords($input);
@@ -27,8 +28,8 @@
         }
         function test_under_100()
         {
-            $number = new Numbers;
-            $input = 17;
+            $number = new AltNumbers;
+            $input = 65;
 
             $result= $number->NumbersToWords($input);
             $this->assertEquals("seventeen ",$result);

@@ -1,7 +1,7 @@
 <?php
     class Numbers
     {
-        function NumbersToWords($input)
+        static function NumbersToWords($input)
         {
             $dictionary = array(0 => "", 1=>'one ', 2=>'two ', 3=>'three ', 4=>'four ', 5=>'five ', 6=>'six ', 7=>'seven ', 8=>'eight ',9=>'nine ', 10=>'ten ', 11=>'eleven ', 12=>'twelve ', 13=>'thirteen ', 14=> 'fourteen ', 15=> 'fifteen ', 16=>'sixteen ', 17=>'seventeen ', 18=> 'eighteen ', 19=>'nineteen ', 20=>'twenty ', 30=>'thirty ', 40=>'four ', 50=>'fifty ', 60=>'sixty ', 70=> 'seventy ', 80=> 'eighty ', 90=> 'ninety ');
             $has_hundredthousands = "";
@@ -31,8 +31,6 @@
                 $tens = $input%100;
                 $ones=0;
             }
-            
-
 
             $result =$dictionary[$hundredthousands].$has_hundredthousands.$dictionary[$tenthousands].$dictionary[$thousands].$has_thousands.$dictionary[$hundreds].$has_hundreds.$dictionary[$tens].$dictionary[$ones];
 
@@ -41,5 +39,4 @@
         }
     }
 
-    // $digit %= pow(10,$i)*(10*$i);
  ?>
