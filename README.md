@@ -1,8 +1,8 @@
-#Numbers to Words
-###Authored by Dylan Stackhouse & Stella Huayhuaca, 2/16/17
-##Description
+# Numbers to Words
+### Authored by Dylan Stackhouse & Stella Huayhuaca, 2/16/17
+## Description
 A website that translates numbers to written words.
-##Specifications
+## Specifications
 1. The program takes one single digit number and translates into it's corresponding word.
     * Input: 1
     * Output: one .
